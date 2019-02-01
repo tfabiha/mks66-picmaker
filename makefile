@@ -1,5 +1,6 @@
 all:
 	python pics.py
+	display image.ppm
 
 clean:
-	rm image
+	rm image.ppm
