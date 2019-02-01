@@ -3,7 +3,7 @@ import math
 
 WIDTH = 500
 HEIGHT = 500
-PART = 2
+PART = 20
 
 def write(f):
     x = WIDTH / PART
@@ -31,9 +31,14 @@ def write(f):
             #g = 255 * i / HEIGHT
             #b = 255
 
-            r = 255 * (j % x) / x
-            g = 255 * (i % y) / y
-            b = 255
+            if i % 2 == 0:
+                g = 255 * j / WIDTH
+                b = 255 * (i % y) / y
+                r = 255
+            else:
+                g = 255 * (j % x) / x
+                b = 255 * i / HEIGHT
+                r = 255
             
             colors = "{} {} {} ".format(r, g, b)
 
